@@ -37,6 +37,8 @@ Di seguito sono elencati i metodi JavaScript utilizzati nel progetto, con link a
 
 - **`window.open()`**: Apre una nuova finestra del browser con l'URL specificato. Utilizzato per aprire PDF e GitHub. [Documentazione](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
 
+- **`await fetch("Studenti.json")`**: Scarica il file Studenti.json dal server
+- **`await response.json()`**: Prende i dati scaricati e li trasforma in un oggetto JavaScript (o array), rendendoli facili da usare nel resto del codice.
 
 ## Funzionalità
 
