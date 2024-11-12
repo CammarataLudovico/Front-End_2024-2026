@@ -1,11 +1,6 @@
-// Funzione per contattare tramite email con indirizzo generato dinamicamente
-function contactEmail(nome, cognome) {
-  const email = `${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it`;
-  window.location.href = `mailto:${email}?subject=Contact`;
-}
-
-const openPDF = () =>
-    window.open("https://example.com/your-pdf-link", "_blank"),
+const contactEmail = (nome, cognome) =>
+    (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`),
+  openPDF = () => window.open("https://example.com/your-pdf-link", "_blank"),
   openGit = () =>
     window.open(
       "https://github.com/CammarataLudovico/Front-End_2024-2026",
