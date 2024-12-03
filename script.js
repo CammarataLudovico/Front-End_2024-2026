@@ -1,4 +1,3 @@
-// Funzione per contattare tramite email con indirizzo generato dinamicamente
 const contactEmail = (nome, cognome) =>
     (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`),
   openPDF = () => window.open("https://example.com/your-pdf-link", "_blank"),
@@ -8,7 +7,6 @@ const contactEmail = (nome, cognome) =>
       "_blank"
     );
 
-// Caricamento dinamico dei dati e generazione delle card
 document.addEventListener("DOMContentLoaded", async function () {
   const cardContainer = document.getElementById("card-container");
 
@@ -16,7 +14,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     const response = await fetch("Studenti.json"),
       cardData = await response.json();
 
-    cardData.forEach((data) => {
+    cardData.forEach((data, index) => {
+      // Usa 'index' per ottenere la posizione
       // Creazione della card
       const card = document.createElement("div"),
         cardInner = document.createElement("div"),
@@ -29,10 +28,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       cardInner.className = "card p-3 shadow-sm";
 
       img.src = data.immagine;
-      img.alt = `Image ${data.numero}`;
+      img.alt = `Image ${index + 1}`; // Usa l'indice + 1 per numerazione
 
       numberDiv.className = "number";
-      numberDiv.textContent = `${data.numero}.`;
+      numberDiv.textContent = `${index + 1}.`; // Usa l'indice + 1 per visualizzare il numero
 
       nameDiv.className = "name";
       nameDiv.textContent = `${data.nome} ${data.cognome}`;
