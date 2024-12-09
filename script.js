@@ -1,6 +1,6 @@
 const contactEmail = (nome, cognome) =>
     (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`),
-  openPDF = () => window.open("https://example.com/your-pdf-link", "_blank"),
+  openPDF = () => window.open("FotoTessere.pdf", download="FotoTessere.pdf" ,"_blank"),
   openGit = () =>
     window.open(
       "https://github.com/CammarataLudovico/Front-End_2024-2026",
