@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       numberDiv.textContent = `${index + 1}.`; // Usa l'indice + 1 per visualizzare il numero
 
       nameDiv.className = "name";
-      nameDiv.textContent = `${data.nome} ${data.cognome}`;
+      nameDiv.innerHTML = `${data.nome} <br> ${data.cognome}`;
 
       button.className = "btn btn-primary contact-btn";
       button.textContent = "Invia Mail";
