@@ -7,13 +7,14 @@ document.addEventListener("DOMContentLoaded", async function () {
   document
     .getElementById("openPDFButton")
     .addEventListener("click", function () {
+      const nomefile = "FotoTessere.pdf";
       // Apri una nuova finestra o scheda con il PDF
-      window.open("FotoTessere.pdf", "_blank");
+      window.open(nomefile, "_blank");
 
       // Avvia il download del file
       const link = document.createElement("a");
-      link.href = "FotoTessere.pdf";
-      link.download = "FotoTessere.pdf";
+      link.href = nomefile;
+      link.download = nomefile;
       link.click();
     });
 
