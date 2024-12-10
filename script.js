@@ -1,11 +1,5 @@
 const contactEmail = (nome, cognome) =>
-    (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`),
-  openPDF = () => window.open("FotoTessere.pdf","_blank"),
-  openGit = () =>
-    window.open(
-      "https://github.com/CammarataLudovico/Front-End_2024-2026",
-      "_blank"
-    );
+  (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`);
 
 document.addEventListener("DOMContentLoaded", async function () {
   const cardContainer = document.getElementById("card-container");
