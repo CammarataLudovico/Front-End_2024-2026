@@ -4,6 +4,19 @@ const contactEmail = (nome, cognome) =>
 document.addEventListener("DOMContentLoaded", async function () {
   const cardContainer = document.getElementById("card-container");
 
+  document
+    .getElementById("openPDFButton")
+    .addEventListener("click", function () {
+      // Apri una nuova finestra o scheda con il PDF
+      window.open("FotoTessere.pdf", "_blank");
+
+      // Avvia il download del file
+      const link = document.createElement("a");
+      link.href = "FotoTessere.pdf";
+      link.download = "FotoTessere.pdf";
+      link.click();
+    });
+
   try {
     const response = await fetch("Studenti.json"),
       cardData = await response.json();

@@ -53,10 +53,20 @@ a {
   margin-top: 5px;
 }
 
-.openPDF,
+#openPDFButton,
 .openGIT {
   background-color: #343a40d5;
   transition: background-color 0.5s;
+}
+
+#openPDFButton:hover,
+.openGIT:hover {
+  background-color: white;
+  color: black;
+}
+
+a:hover {
+  color: black;
 }
 
 .footer {
