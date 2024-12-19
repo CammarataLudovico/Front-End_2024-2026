@@ -1,6 +1,8 @@
-function generateContactEmail(nome, cognome) {
-  const email = `${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it`, subject = `Contatto via mail di ${nome} ${cognome}`,mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-  
+function contactEmail(nome, cognome) {
+  const email = `${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it`,
+    subject = `Contatto via mail di ${nome} ${cognome}`,
+    mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+
   window.location.href = mailtoLink;
 }
 
