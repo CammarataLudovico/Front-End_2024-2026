@@ -1,5 +1,8 @@
-const contactEmail = (nome, cognome) =>
-  (window.location.href = `mailto:${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it?subject=Contact`);
+function generateContactEmail(nome, cognome) {
+  const email = `${nome.toLowerCase()}.${cognome.toLowerCase()}.24@stud.itsaltoadriatico.it`, subject = `Contatto via mail di ${nome} ${cognome}`,mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  
+  window.location.href = mailtoLink;
+}
 
 document.addEventListener("DOMContentLoaded", async function () {
   const cardContainer = document.getElementById("card-container");
