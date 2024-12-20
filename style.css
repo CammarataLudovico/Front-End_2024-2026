@@ -1,5 +1,6 @@
-header {
-  background-color: #343a40 !important;
+header,
+footer {
+  background-color: #1a1a2e !important;
 }
 
 a {
@@ -69,11 +70,10 @@ a:hover {
   color: black;
 }
 
-.footer {
+footer {
   text-align: center;
   font-size: 2rem;
   font-weight: bold !important;
-  background-color: #343a40; /* Sfondo scuro */
   color: white; /* Testo bianco */
   padding: 20px 0; /* Padding sopra e sotto */
 }
