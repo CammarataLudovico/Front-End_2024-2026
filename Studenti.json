@@ -1,0 +1,127 @@
+[
+  {
+    "nome": "Adrion",
+    "cognome": "Bytyqi",
+    "immagine": "./img/Stud_img/1_Adrion.jpg"
+  },
+  {
+    "nome": "Ludovico",
+    "cognome": "Cammarata",
+    "immagine": "./img/Stud_img/2_Ludovico.jpg"
+  },
+  {
+    "nome": "Damiano",
+    "cognome": "Castellarin",
+    "immagine": "./img/Stud_img/3_Damiano.jpg"
+  },
+  {
+    "nome": "Matteo",
+    "cognome": "Celant",
+    "immagine": "./img/Stud_img/4_Matteo.jpg"
+  },
+  {
+    "nome": "Damiano",
+    "cognome": "Da Ros",
+    "immagine": "./img/Stud_img/5_DamianoDaRos.jpg"
+  },
+  {
+    "nome": "Samuele",
+    "cognome": "Drigo",
+    "immagine": "./img/Stud_img/6_DrigoSamuele.jpg"
+  },
+  {
+    "nome": "Sara",
+    "cognome": "Fnaiqi",
+    "immagine": "./img/Stud_img/7_SaraFnaiqi.jpg"
+  },
+  {
+    "nome": "Matteo",
+    "cognome": "Galante",
+    "immagine": "./img/Stud_img/8_MatteoGalante.jpg"
+  },
+  {
+    "nome": "Aurora",
+    "cognome": "Gasparutti",
+    "immagine": "./img/Stud_img/9_Aurora.jpg"
+  },
+  {
+    "nome": "Nicolò",
+    "cognome": "Gobbo",
+    "immagine": "./img/Stud_img/10_Nicolo.jpg"
+  },
+  {
+    "nome": "Kawe",
+    "cognome": "Longon",
+    "immagine": "./img/Stud_img/11_Kawe.jpg"
+  },
+  {
+    "nome": "Gaia",
+    "cognome": "Mantovani",
+    "immagine": "./img/Stud_img/12_Gaia.jpg"
+  },
+  {
+    "nome": "Nicola",
+    "cognome": "Marano",
+    "immagine": "./img/Stud_img/13_Nicola.jpg"
+  },
+  {
+    "nome": "Denis",
+    "cognome": "Mascherin",
+    "immagine": "./img/Stud_img/14_Denis.jpg"
+  },
+  {
+    "nome": "Zawadi Emilia",
+    "cognome": "Piccolo",
+    "immagine": "./img/Stud_img/15_Zawadi.jpg"
+  },
+  {
+    "nome": "Marco",
+    "cognome": "Prevarin",
+    "immagine": "./img/Stud_img/16_Prevarin_Marco.jpg"
+  },
+  {
+    "nome": "Giulia",
+    "cognome": "Quaino",
+    "immagine": "./img/Stud_img/17_GiuliaQuaino.jpg"
+  },
+  {
+    "nome": "Valentina",
+    "cognome": "Rossi",
+    "immagine": "./img/Stud_img/18_Valentina.jpeg"
+  },
+  {
+    "nome": "Marco",
+    "cognome": "Segato",
+    "immagine": "./img/Stud_img/19_MarcoSegato.jpg"
+  },
+  {
+    "nome": "Brayan Camilo",
+    "cognome": "Serraino",
+    "immagine": "./img/Stud_img/20_Brayan.jpg"
+  },
+  {
+    "nome": "Alessia",
+    "cognome": "Tolotti",
+    "immagine": "./img/Stud_img/21_AlessiaTolotti.jpg"
+  },
+  {
+    "nome": "Luca",
+    "cognome": "Villalta",
+    "immagine": "./img/Stud_img/22_villalta_luca.jpg"
+  },
+  {
+    "nome": "Emanuele",
+    "cognome": "Zanchetta",
+    "immagine": "./img/Stud_img/23_Emanuele.jpg"
+  },
+  {
+    "nome": "Simone",
+    "cognome": "Zoccarato",
+    "immagine": "./img/Stud_img/24_Simone_Zoccarato.jpg"
+  },
+  {
+    "nome": "Giovanni",
+    "cognome": "Zol",
+    "immagine": "./img/Stud_img/25_Giovanni.jpg"
+  }
+]
