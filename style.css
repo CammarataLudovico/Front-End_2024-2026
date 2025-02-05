@@ -88,3 +88,32 @@ footer {
     margin-right: 0; /* Rimuove il margine dall'ultima card della riga */
   }
 }
+
+#openPDFButton,
+.openGIT {
+  background-color: #343a40d5;
+  transition: background-color 0.5s, color 0.5s; /* Transizione per sfondo e colore del testo */
+  position: relative; /* Necessario per l'uso di z-index */
+}
+
+#openPDFButton:hover,
+.openGIT:hover {
+  background-color: #f1f1f1; /* Colore di sfondo più chiaro */
+  color: #343a40; /* Colore del testo più scuro per contrasto */
+}
+
+/* Imposta lo z-index per il link nel bottone per assicurarti che stia sopra al bottone */
+.openGIT a {
+  position: relative;
+  z-index: 2; /* Assicurati che il link sia sopra il bottone */
+  color: inherit; /* Mantieni il colore del testo del bottone */
+  text-decoration: none;
+}
+
+.openGIT:hover a {
+  color: #343a40; /* Cambia il colore del link al passaggio del mouse */
+}
+
+a:hover {
+  color: #343a40; /* Cambia il colore del link durante hover per contrasto */
+}
