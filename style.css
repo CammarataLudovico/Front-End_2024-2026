@@ -1,123 +1,119 @@
-@media print {
-    /* Nascondi tutti i bottoni */
-    .contact-btn,
-    .openPDF,
-    .openGIT {
-        display: none;
-    }
-
-    /* Nascondi il footer */
-    .footer {
-        display: none;
-    }
+header,
+footer {
+  background-color: #1a1a2e !important;
 }
 
-
-/* Header */
-header {
-    background-color: #1a1a2e !important; /* Blu scuro elegante */
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-/* Card */
 .card {
-    text-align: center;
-    margin-bottom: 20px;
-    border-radius: 1rem;
-    background: linear-gradient(145deg, #ffffff, #f3f3f3); /* Sfondo chiaro con gradiente */
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  background-color: #f8f9fa; /* Colore di sfondo più chiaro */
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Effetto di sollevamento */
-    background: linear-gradient(145deg, #f5f5f5, #e6e6e6); /* Gradiente al passaggio del mouse */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7);
-    
+  transform: translateY(
+    -10px
+  ); /* Effetto di sollevamento al passaggio del mouse */
+  background-color: #e9ecef;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    background-clip: padding-box;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
-} /*sistema*/
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
 
-/* Numero della Card */
 .card .number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 10px 0;
-    color: black; /* Blu acceso per evidenziare */
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-/* Nome e Cognome */
-.card .name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 5px;
-    color: #333; /* Testo scuro per contrasto */
-}
-
-/* Bottone per contattare via email */
 .card .contact-btn {
-    margin-top: 10px;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #00b333, #007f24); /* Gradiente verde moderno */
-    color: white; /* Testo bianco */
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #343a40; /* Colore di sfondo blu */
+  color: white; /* Colore del testo bianco */
+  border: none; /* Nessun bordo */
+  padding: 10px 20px; /* Padding interno */
+  transition: background-color 0.5s; /* Transizione per effetto hover */
 }
 
 .card .contact-btn:hover {
-    background: linear-gradient(145deg, #00e64d, #009933); /* Verde più acceso al passaggio del mouse */
-    transform: scale(1.05); /* Leggero effetto zoom */
-    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+  background-color: #00b333; /* Colore di sfondo al passaggio del mouse */
 }
 
-
-/* Bottone PDF e Git */
-.openPDF, .openGIT {
-    background: linear-gradient(145deg, #343a40, #2c3136);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 15px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    font-size: 1rem;
-    margin: 10px 5px;
+.card .name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
-.openPDF:hover, .openGIT:hover {
-    background: linear-gradient(145deg, #495057, #343a40); /* Grigio scuro per hover */
-    transform: scale(1.05);
+#openPDFButton,
+.openGIT {
+  background-color: #343a40d5;
+  transition: background-color 0.5s;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: #1a1a2e; /* Sfondo scuro elegante */
-    color: white;
-    padding: 20px 0;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+#openPDFButton:hover,
+.openGIT:hover {
+  background-color: white;
+  color: black;
 }
 
-/* Layout personalizzato per la griglia delle card */
+a:hover {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold !important;
+  color: white; /* Testo bianco */
+  padding: 20px 0; /* Padding sopra e sotto */
+}
+
 @media (min-width: 1200px) {
-    .col-custom-5 {
-        flex: 0 0 19%; /* Ogni card occupa il 19% della larghezza */
-        max-width: 19%;
-        margin-right: 1%;
-    }
-    .col-custom-5:nth-child(4n) {
-        margin-right: 0; /* Rimuove il margine dall'ultima card della riga */
-    }
+  .col-custom-5 {
+    flex: 0 0 19%; /* Ogni card occupa il 19% della larghezza */
+    max-width: 19%;
+    margin-right: 1%;
+  }
+  .col-custom-5:nth-child(5n) {
+    margin-right: 0; /* Rimuove il margine dall'ultima card della riga */
+  }
+}
+
+#openPDFButton,
+.openGIT {
+  background-color: #343a40d5;
+  transition: background-color 0.5s, color 0.5s; /* Transizione per sfondo e colore del testo */
+  position: relative; /* Necessario per l'uso di z-index */
+}
+
+#openPDFButton:hover,
+.openGIT:hover {
+  background-color: #f1f1f1; /* Colore di sfondo più chiaro */
+  color: #343a40; /* Colore del testo più scuro per contrasto */
+}
+
+/* Imposta lo z-index per il link nel bottone per assicurarti che stia sopra al bottone */
+.openGIT a {
+  position: relative;
+  z-index: 2; /* Assicurati che il link sia sopra il bottone */
+  color: inherit; /* Mantieni il colore del testo del bottone */
+  text-decoration: none;
+}
+
+.openGIT:hover a {
+  color: #343a40; /* Cambia il colore del link al passaggio del mouse */
+}
+
+a:hover {
+  color: #343a40; /* Cambia il colore del link durante hover per contrasto */
 }
