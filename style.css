@@ -1,119 +1,328 @@
-header,
-footer {
-  background-color: #1a1a2e !important;
+:root {
+  --primary-color: #2a2a5e;
+  --secondary-color: #4a4a8a;
+  --accent-color: #6c63ff;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --transition-speed: 0.3s;
+  --border-radius: 1rem;
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-a {
-  text-decoration: none;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  transition: background-color var(--transition-speed);
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.action-buttons {
+  padding: 1rem 0;
+}
+
+.action-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
+
+#generatePDFButton {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+#generatePDFButton:hover {
+  background-color: #5753d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(108, 99, 255, 0.2);
+}
+
+.openGIT {
+  background-color: var(--dark-color);
+  border: none;
+}
+
+.openGIT:hover {
+  background-color: #343a40;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(33, 37, 41, 0.2);
+}
+
+.openGIT a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Card Styling */
 .card {
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 1rem;
-  background-color: #f8f9fa; /* Colore di sfondo più chiaro */
+  border: none;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-speed);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(
-    -10px
-  ); /* Effetto di sollevamento al passaggio del mouse */
-  background-color: #e9ecef;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Ottimizzazione immagini per mobile e tablet */
+@media (max-width: 991.98px) {
+  .card img {
+    max-height: 150px;
+    /* Limita l'altezza su tablet */
+    object-fit: contain;
+    /* Mostra l'immagine completa senza tagliarla */
+    background-color: white;
+    /* Sfondo leggero per le immagini */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card img {
+    max-height: 130px;
+    /* Limita ulteriormente l'altezza su mobile */
+    object-fit: contain;
+    /* Mostra l'immagine completa senza tagliarla */
+  }
 }
 
 .card .number {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.card .contact-btn {
-  margin-top: 10px;
-  border-radius: 15px;
-  background-color: #343a40; /* Colore di sfondo blu */
-  color: white; /* Colore del testo bianco */
-  border: none; /* Nessun bordo */
-  padding: 10px 20px; /* Padding interno */
-  transition: background-color 0.5s; /* Transizione per effetto hover */
-}
-
-.card .contact-btn:hover {
-  background-color: #00b333; /* Colore di sfondo al passaggio del mouse */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
 }
 
 .card .name {
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+  color: var(--dark-color);
+  line-height: 1.4;
 }
 
-#openPDFButton,
-.openGIT {
-  background-color: #343a40d5;
-  transition: background-color 0.5s;
+.card .contact-btn {
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00b333, #008f29);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 8px rgba(0, 179, 51, 0.2);
 }
 
-#openPDFButton:hover,
-.openGIT:hover {
-  background-color: white;
-  color: black;
+.card .contact-btn:hover {
+  background: linear-gradient(135deg, #00cc3a, #00a62f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 179, 51, 0.3);
 }
 
-a:hover {
-  color: black;
-}
-
+/* Footer Styling */
 footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold !important;
-  color: white; /* Testo bianco */
-  padding: 20px 0; /* Padding sopra e sotto */
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
+footer small {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer img {
+  height: 20px;
+  width: auto;
+  filter: invert(1);
+}
+
+/* Responsive Grid */
 @media (min-width: 1200px) {
   .col-custom-5 {
-    flex: 0 0 19%; /* Ogni card occupa il 19% della larghezza */
+    flex: 0 0 19%;
     max-width: 19%;
-    margin-right: 1%;
+    margin-right: 1.25%;
   }
+
   .col-custom-5:nth-child(5n) {
-    margin-right: 0; /* Rimuove il margine dall'ultima card della riga */
+    margin-right: 0;
   }
 }
 
-#openPDFButton,
-.openGIT {
-  background-color: #343a40d5;
-  transition: background-color 0.5s, color 0.5s; /* Transizione per sfondo e colore del testo */
-  position: relative; /* Necessario per l'uso di z-index */
+@media (max-width: 1199.98px) {
+  .col-custom-5 {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    margin-right: 20px;
+  }
+
+  .col-custom-5:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
-#openPDFButton:hover,
-.openGIT:hover {
-  background-color: #f1f1f1; /* Colore di sfondo più chiaro */
-  color: #343a40; /* Colore del testo più scuro per contrasto */
+@media (max-width: 991.98px) {
+  .col-custom-5 {
+    flex: 0 0 calc(33.333% - 13.333px);
+    max-width: calc(33.333% - 13.333px);
+    margin-right: 20px;
+  }
+
+  .col-custom-5:nth-child(4n) {
+    margin-right: 20px;
+  }
+
+  .col-custom-5:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
-/* Imposta lo z-index per il link nel bottone per assicurarti che stia sopra al bottone */
-.openGIT a {
-  position: relative;
-  z-index: 2; /* Assicurati che il link sia sopra il bottone */
-  color: inherit; /* Mantieni il colore del testo del bottone */
-  text-decoration: none;
+@media (max-width: 767.98px) {
+  .col-custom-5 {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  .col-custom-5:nth-child(3n) {
+    margin-right: 20px;
+  }
+
+  .col-custom-5:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
-.openGIT:hover a {
-  color: #343a40; /* Cambia il colore del link al passaggio del mouse */
+@media (max-width: 575.98px) {
+  .col-custom-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
-a:hover {
-  color: #343a40; /* Cambia il colore del link durante hover per contrasto */
+/* PDF Styling */
+#pdf-template {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  background-color: #f5f7fa;
+  /* Stesso colore di sfondo del sito */
+}
+
+.pdf-header {
+  text-align: center;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #2a2a5e, #4a4a8a);
+  /* Stesso gradiente dell'header del sito */
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.pdf-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pdf-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  justify-content: center;
+}
+
+.pdf-card {
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-card img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.pdf-card .number-name {
+  font-weight: bold;
+  margin-top: 2px;
+  font-size: 8px;
+  color: #212529;
+  /* Stesso colore del testo del sito */
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #pdf-template,
+  #pdf-template * {
+    visibility: visible;
+  }
+
+  #pdf-template {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
